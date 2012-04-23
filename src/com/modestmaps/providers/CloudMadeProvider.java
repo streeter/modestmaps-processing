@@ -15,12 +15,12 @@ public class CloudMadeProvider extends AbstractMapProvider {
   public String TOURIST = "7";
   public String FRESH = "997";
   public String PALE_DAWN = "998";
-  public String MIDNIGHT_COMMANDER = "999"
+  public String MIDNIGHT_COMMANDER = "999";
 
   public CloudMadeProvider(String key, String style) {
+    super(new MercatorProjection(26, new Transformation(1.068070779e7f, 0.0f, 3.355443185e7f, 0.0f, -1.068070890e7f, 3.355443057e7f)));
     this.key = key;
     this.style = style;
-    super(new MercatorProjection(26, new Transformation(1.068070779e7f, 0.0f, 3.355443185e7f, 0.0f, -1.068070890e7f, 3.355443057e7f)));
   }
 
   public int tileWidth() {
